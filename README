@@ -2,7 +2,7 @@ My modified version of DWM with the following changes:
 
 - Different keyboard shortcuts.
 - Different colours.
-- Applied autostart and attachaside patches.
+- Applied autostart, pertag and attachaside patches.
 
 dwm - dynamic window manager
 ============================
