@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,        NULL,       0,            0,             -1 },
 	{ "trayer",   NULL,        NULL,       1 << 8,       1,             -1 },
 	{ NULL,       NULL, "FSL 5.0.9",       0,            1,             -1 },
+	{ NULL,       NULL, "FSL 6.0.0",       0,            1,             -1 },
 	{ NULL,       NULL, "FEAT - FMRI Expert Analysis Tool v6.00", 0, 1, -1 },
 	{ NULL,       "r_x11",     NULL,       0,            1,             -1 },
 };
