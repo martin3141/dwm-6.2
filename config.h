@@ -31,16 +31,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,        NULL,       0,            1,             -1 },
-	{ NULL,       "afni",      NULL,       0,            1,             -1 },
-	{ NULL,       "AFNI",      NULL,       0,            1,             -1 },
-	{ "Firefox",  NULL,        NULL,       0,            0,             -1 },
-	{ "trayer",   NULL,        NULL,       1 << 8,       1,             -1 },
-	{ NULL,       NULL, "FSL 5.0.9",       0,            1,             -1 },
-	{ NULL,       NULL, "FSL 6.0.0",       0,            1,             -1 },
-	{ NULL,       NULL, "FEAT - FMRI Expert Analysis Tool v6.00", 0, 1, -1 },
-	{ NULL,       "r_x11",     NULL,       0,            1,             -1 },
+	/* class      instance    title       tags mask     iscentered      isfloating   monitor */
+	{ "Gimp",     NULL,        NULL,       0,           0,               1,             -1 },
+	{ NULL,       "afni",      NULL,       0,           0,               1,             -1 },
+	{ NULL,       "AFNI",      NULL,       0,           0,               1,             -1 },
+	{ "Firefox",  NULL,        NULL,       0,           0,               0,             -1 },
+	{ "trayer",   NULL,        NULL,       1 << 8,      0,               1,             -1 },
+	{ NULL,       NULL, "FSL 5.0.9",       0,           0,               1,             -1 },
+	{ NULL,       NULL, "FSL 6.0.0",       0,           0,               1,             -1 },
+	{ NULL,       NULL, "FEAT - FMRI Expert Analysis Tool v6.00", 0, 0,  1,             -1 },
+	{ NULL,       "r_x11",     NULL,       0,           0,               1,             -1 },
+	{ NULL,       NULL,        "st",       0,           1,               1,             -1 },
 };
 
 /* layout(s) */
