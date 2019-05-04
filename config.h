@@ -35,13 +35,15 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,        NULL,       0,           0,               1,             -1 },
 	{ NULL,       "afni",      NULL,       0,           0,               1,             -1 },
 	{ NULL,       "AFNI",      NULL,       0,           0,               1,             -1 },
-	{ "Firefox",  NULL,        NULL,       0,           0,               0,             -1 },
+	{ "Firefox",  NULL,        NULL,       1 << 1,      0,               0,             -1 },
 	{ "trayer",   NULL,        NULL,       1 << 8,      0,               1,             -1 },
 	{ NULL,       NULL, "FSL 5.0.9",       0,           0,               1,             -1 },
 	{ NULL,       NULL, "FSL 6.0.0",       0,           0,               1,             -1 },
 	{ NULL,       NULL, "FEAT - FMRI Expert Analysis Tool v6.00", 0, 0,  1,             -1 },
 	{ NULL,       "r_x11",     NULL,       0,           0,               1,             -1 },
-	{ NULL,       NULL,        "st",       0,           1,               1,             -1 },
+	{ NULL,       NULL,        "st",       1,           1,               1,             -1 },
+	{ NULL,       "rstudio",   NULL,       1 << 2,      0,               0,             -1 },
+	{ "Spotify",  NULL,        NULL,       1 << 8,      0,               0,             -1 },
 };
 
 /* layout(s) */
@@ -74,6 +76,7 @@ static const char *termcmd[]  = { "st", NULL };
 //static const char *termcmd[]  = { "/home/martin/.local/kitty.app/bin/kitty", NULL };
 static const char *browsecmd[]  = { "firefox", NULL };
 static const char *rangercmd[]  = { "st", "-e", "ranger", NULL };
+static const char *rcmd[]       = { "rstudio-bin", NULL };
 static const char *vimcmd[]  = { "st", "-e", "/home/martin/bin/start_vim", NULL };
 
 static Key keys[] = {
@@ -82,7 +85,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsecmd } },
-	{ MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = rcmd } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = vimcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
