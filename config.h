@@ -74,15 +74,17 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL };
-static const char *termcmd[]    = { "/home/martin/bin/st", NULL };
-static const char *browsecmd[]  = { "firefox", NULL };
-static const char *spotifycmd[] = { "spotify", NULL };
-static const char *rcmd[]       = { "rstudio-bin", NULL };
-static const char *playcmd[]    = { "playerctl", "play-pause", NULL };
-static const char *stopcmd[]    = { "playerctl", "stop", NULL };
-static const char *nextcmd[]    = { "playerctl", "next", NULL };
-static const char *prevcmd[]    = { "playerctl", "previous", NULL };
+static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL };
+static const char *termcmd[]     = { "/home/martin/bin/st", NULL };
+static const char *browsecmd[]   = { "firefox", NULL };
+static const char *spotifycmd[]  = { "spotify", NULL };
+static const char *rcmd[]        = { "rstudio-bin", NULL };
+static const char *playcmd[]     = { "playerctl", "play-pause", NULL };
+static const char *stopcmd[]     = { "playerctl", "stop", NULL };
+static const char *nextcmd[]     = { "playerctl", "next", NULL };
+static const char *prevcmd[]     = { "playerctl", "previous", NULL };
+static const char *brightupcmd[] = { "xbacklight", "-inc", "10", NULL };
+static const char *brightdncmd[] = { "xbacklight", "-dec", "10", NULL };
 
 static Key keys[] = {
 	/* modifier                  key          function        argument */
@@ -95,6 +97,8 @@ static Key keys[] = {
 	{ 0,                         0x1008ff15,  spawn,          {.v = stopcmd } },
 	{ 0,                         0x1008ff16,  spawn,          {.v = prevcmd } },
 	{ 0,                         0x1008ff17,  spawn,          {.v = nextcmd } },
+	{ 0,                         0x1008ff02,  spawn,          {.v = brightupcmd } },
+	{ 0,                         0x1008ff03,  spawn,          {.v = brightdncmd } },
 	{ MODKEY,                    XK_b,        togglebar,      {0} },
 	{ MODKEY,                    XK_j,        focusstack,     {.i = +1 } },
 	{ MODKEY,                    XK_k,        focusstack,     {.i = -1 } },
