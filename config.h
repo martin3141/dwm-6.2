@@ -43,6 +43,9 @@ static const Rule rules[] = {
 	{ NULL,       "r_x11",     NULL,       0,           0,               1,             -1 },
 	{ NULL,       NULL,        "st",       1,           1,               1,             -1 },
 	{ NULL,       "rstudio",   NULL,       1 << 2,      0,               0,             -1 },
+	{ NULL,       NULL, "SSL/SSH VNC Viewer", 1 << 7,        1,               1,             -1 },
+	{ NULL,       "ssvnc.tcl", NULL,       1 << 7,           1,               1,             -1 },
+	{ NULL,       "vncviewer", NULL,       1 << 7,      1,               1,             -1 },
 	{ "Spotify",  NULL,        NULL,       1 << 8,      0,               0,             -1 },
 };
 
