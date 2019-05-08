@@ -94,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY,                    XK_s,        spawn,          {.v = termcmd } },
 	{ MODKEY,                    XK_w,        spawn,          {.v = browsecmd } },
 	{ MODKEY,                    XK_a,        spawn,          {.v = spotifycmd } },
+	{ MODKEY,                    XK_r,        spawn,          {.v = rcmd } },
 	{ 0,                         0x1008ff14,  spawn,          {.v = playcmd } },
 	{ 0,                         0x1008ff15,  spawn,          {.v = stopcmd } },
 	{ 0,                         0x1008ff16,  spawn,          {.v = prevcmd } },
