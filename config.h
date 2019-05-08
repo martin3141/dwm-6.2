@@ -43,8 +43,8 @@ static const Rule rules[] = {
 	{ NULL,       "r_x11",     NULL,       0,           0,               1,             -1 },
 	{ NULL,       NULL,        "st",       1,           1,               1,             -1 },
 	{ NULL,       "rstudio",   NULL,       1 << 2,      0,               0,             -1 },
-	{ NULL,       NULL, "SSL/SSH VNC Viewer", 1 << 7,        1,               1,             -1 },
-	{ NULL,       "ssvnc.tcl", NULL,       1 << 7,           1,               1,             -1 },
+	{ NULL,       NULL, "SSL/SSH VNC Viewer", 1 << 7,   1,               1,             -1 },
+	{ NULL,       "ssvnc.tcl", NULL,       1 << 7,      1,               1,             -1 },
 	{ NULL,       "vncviewer", NULL,       1 << 7,      1,               1,             -1 },
 	{ "Spotify",  NULL,        NULL,       1 << 8,      0,               0,             -1 },
 	{ "Skype",    NULL,        NULL,       1 << 6,      1,               1,             -1 },
@@ -122,6 +122,10 @@ static Key keys[] = {
 	{ MODKEY,                    XK_period,   focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,          XK_comma,    tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,          XK_period,   tagmon,         {.i = +1 } },
+	TAGKEYS(                     XK_s,                        0) // terminal
+	TAGKEYS(                     XK_w,                        1) // firefox
+	TAGKEYS(                     XK_r,                        2) // rstudio
+	TAGKEYS(                     XK_a,                        8) // spotify
 	TAGKEYS(                     XK_1,                        0)
 	TAGKEYS(                     XK_2,                        1)
 	TAGKEYS(                     XK_3,                        2)
