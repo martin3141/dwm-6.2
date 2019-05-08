@@ -47,6 +47,7 @@ static const Rule rules[] = {
 	{ NULL,       "ssvnc.tcl", NULL,       1 << 7,           1,               1,             -1 },
 	{ NULL,       "vncviewer", NULL,       1 << 7,      1,               1,             -1 },
 	{ "Spotify",  NULL,        NULL,       1 << 8,      0,               0,             -1 },
+	{ "Skype",    NULL,        NULL,       1 << 6,      1,               1,             -1 },
 };
 
 /* layout(s) */
