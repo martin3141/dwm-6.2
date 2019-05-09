@@ -29,6 +29,7 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const char fsl[]   = "FSL 6.0.1";
 static const char feat[]  = "FEAT - FMRI Expert Analysis Tool v6.00";
 static const char ssvnc[] = "SSL/SSH VNC Viewer";
+static const char np[]    = "notepad";
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,6 +45,8 @@ static const Rule rules[] = {
 	{ NULL,       NULL,        feat,  0,         1,          1,            -1 },
 	{ NULL,       "r_x11",     NULL,  0,         0,          1,            -1 },
 	{ NULL,       NULL,        "st",  1,         1,          1,            -1 },
+	{ NULL,       NULL,        "calc",0,         0,          1,            -1 },
+	{ NULL,       NULL,        np,    0,         0,          1,            -1 },
 	{ NULL,       "rstudio",   NULL,  1 << 2,    0,          0,            -1 },
 	{ NULL,       NULL,        ssvnc, 1 << 7,    1,          1,            -1 },
 	{ NULL,       "ssvnc.tcl", NULL,  1 << 7,    1,          1,            -1 },
@@ -80,6 +83,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL };
 static const char *termcmdtm[]   = { "/home/martin/bin/sttm", NULL };
 static const char *termcmd[]     = { "/home/martin/bin/st", NULL };
+static const char *calccmd[]     = { "/home/martin/bin/calculator", NULL };
+static const char *npcmd[]       = { "/home/martin/bin/notepad", NULL };
 static const char *browsecmd[]   = { "firefox", NULL };
 static const char *spotifycmd[]  = { "spotify", NULL };
 static const char *rcmd[]        = { "rstudio-bin", NULL };
@@ -98,6 +103,8 @@ static Key keys[] = {
 	{ MODKEY,                    XK_w,        spawn,          {.v = browsecmd } },
 	{ MODKEY,                    XK_a,        spawn,          {.v = spotifycmd } },
 	{ MODKEY,                    XK_r,        spawn,          {.v = rcmd } },
+	{ MODKEY,                    XK_c,        spawn,          {.v = calccmd } },
+	{ MODKEY,                    XK_n,        spawn,          {.v = npcmd } },
 	{ 0,                         0x1008ff14,  spawn,          {.v = playcmd } },
 	{ 0,                         0x1008ff15,  spawn,          {.v = stopcmd } },
 	{ 0,                         0x1008ff16,  spawn,          {.v = prevcmd } },
