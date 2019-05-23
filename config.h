@@ -31,6 +31,7 @@ static const char feat[]  = "FEAT - FMRI Expert Analysis Tool v6.00";
 static const char ssvnc[] = "SSL/SSH VNC Viewer";
 static const char np[]    = "notepad";
 static const char sp[]    = "spant_plot";
+static const char pv[]    = "Pavucontrol";
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -55,6 +56,7 @@ static const Rule rules[] = {
 	{ "Spotify",  NULL,        NULL,  1 << 8,    0,          0,            -1 },
 	{ "Skype",    NULL,        NULL,  1 << 6,    1,          1,            -1 },
 	{ sp,         NULL,        NULL,  0,         1,          1,            -1 },
+	{ pv,         NULL,        NULL,  0,         1,          1,            -1 },
 };
 
 /* layout(s) */
