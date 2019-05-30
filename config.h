@@ -46,7 +46,6 @@ static const Rule rules[] = {
 	{ NULL,       NULL,         fsl,  0,         1,          1,            -1 },
 	{ NULL,       NULL,        feat,  0,         1,          1,            -1 },
 	{ NULL,       "r_x11",     NULL,  0,         0,          1,            -1 },
-	{ NULL,       NULL,        "st",  1,         1,          1,            -1 },
 	{ NULL,       NULL,        "calc",0,         0,          1,            -1 },
 	{ NULL,       NULL,        np,    0,         0,          1,            -1 },
 	{ NULL,       "rstudio",   NULL,  1 << 2,    0,          0,            -1 },
@@ -103,7 +102,7 @@ static Key keys[] = {
 	/* modifier                  key          function        argument */
 	{ MODKEY,                    XK_p,        spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,          XK_Return,   spawn,          {.v = termcmd } },
-	{ MODKEY,                    XK_s,        spawn,          {.v = termcmdtm } },
+	{ MODKEY,                    XK_s,        spawn,          {.v = termcmd } },
 	{ MODKEY,                    XK_w,        spawn,          {.v = browsecmd } },
 	{ MODKEY,                    XK_a,        spawn,          {.v = spotifycmd } },
 	{ MODKEY,                    XK_r,        spawn,          {.v = rcmd } },
@@ -136,7 +135,6 @@ static Key keys[] = {
 	{ MODKEY,                    XK_period,   focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,          XK_comma,    tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,          XK_period,   tagmon,         {.i = +1 } },
-	TAGKEYS(                     XK_s,                        0) // terminal
 	TAGKEYS(                     XK_w,                        1) // firefox
 	TAGKEYS(                     XK_r,                        2) // rstudio
 	TAGKEYS(                     XK_a,                        8) // spotify
