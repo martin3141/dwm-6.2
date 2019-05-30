@@ -19,7 +19,7 @@ static const char col_blue[]        = "#83a598";
 static const char col_red[]         = "#fb4934";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_blue, col_bg,  col_bg },
+	[SchemeNorm] = { col_blue, col_bg,  col_gray2 },
 	[SchemeSel]  = { col_red,  col_bg,  col_blue },
 };
 
