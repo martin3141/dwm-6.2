@@ -12,15 +12,21 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "DejaVu sans Mono:pixelsize=14:antialias=true:autohint=true" };
 static const char dmenufont[]       = "DejaVu sans Mono:pixelsize=14:antialias=true:autohint=true";
 static const char col_bg[]          = "#1d2021";
+static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
+static const char col_cyan[]        = "#005577";
 static const char col_blue[]        = "#83a598";
+static const char col_blue2[]       = "#076678";
 static const char col_red[]         = "#fb4934";
 static const char *colors[][3]      = {
 	/*               fg        bg       border   */
 	[SchemeNorm] = { col_blue, col_bg,  col_gray2 },
-	[SchemeSel]  = { col_red,  col_bg,  col_blue },
+	[SchemeSel]  = { col_red,  col_bg,  col_blue  },
+
+	//[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	//[SchemeSel]  = { col_gray4, col_blue2, col_blue2 },
 };
 
 /* tagging */
