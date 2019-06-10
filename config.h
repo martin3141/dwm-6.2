@@ -38,6 +38,7 @@ static const char ssvnc[] = "SSL/SSH VNC Viewer";
 static const char np[]    = "notepad";
 static const char sp[]    = "spant_plot";
 static const char pv[]    = "Pavucontrol";
+static const char ww[]    = "winword.exe";
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -48,18 +49,19 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,        NULL,  0,         0,          1,            -1 },
 	{ NULL,       "afni",      NULL,  0,         0,          1,            -1 },
 	{ NULL,       "AFNI",      NULL,  0,         0,          1,            -1 },
-	{ "Firefox",  NULL,        NULL,  1 << 1,    0,          0,            -1 },
 	{ NULL,       NULL,         fsl,  0,         1,          1,            -1 },
 	{ NULL,       NULL,        feat,  0,         1,          1,            -1 },
 	{ NULL,       "r_x11",     NULL,  0,         0,          1,            -1 },
 	{ NULL,       NULL,        "calc",0,         0,          1,            -1 },
 	{ NULL,       NULL,        np,    0,         0,          1,            -1 },
+	{ "Firefox",  NULL,        NULL,  1 << 1,    0,          0,            -1 },
 	{ NULL,       "rstudio",   NULL,  1 << 2,    0,          0,            -1 },
+	{ NULL,       ww,          NULL,  1 << 3,    0,          0,            -1 },
+	{ "Skype",    NULL,        NULL,  1 << 6,    1,          1,            -1 },
 	{ NULL,       NULL,        ssvnc, 1 << 7,    1,          1,            -1 },
 	{ NULL,       "ssvnc.tcl", NULL,  1 << 7,    1,          1,            -1 },
 	{ NULL,       "vncviewer", NULL,  1 << 7,    1,          1,            -1 },
 	{ "Spotify",  NULL,        NULL,  1 << 8,    0,          0,            -1 },
-	{ "Skype",    NULL,        NULL,  1 << 6,    1,          1,            -1 },
 	{ sp,         NULL,        NULL,  0,         1,          1,            -1 },
 	{ pv,         NULL,        NULL,  0,         1,          1,            -1 },
 };
