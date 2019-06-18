@@ -64,6 +64,7 @@ static const Rule rules[] = {
 	{ "Spotify",  NULL,        NULL,  1 << 8,    0,          0,            -1 },
 	{ sp,         NULL,        NULL,  0,         1,          1,            -1 },
 	{ pv,         NULL,        NULL,  0,         1,          1,            -1 },
+	{ "Emacs",    NULL,        NULL,  0,         1,          1,            -1 },
 };
 
 /* layout(s) */
