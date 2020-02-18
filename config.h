@@ -54,17 +54,17 @@ static const Rule rules[] = {
 	{ NULL,       "r_x11",     NULL,  0,         0,          1,            -1 },
 	{ NULL,       NULL,        "calc",0,         0,          1,            -1 },
 	{ NULL,       NULL,        np,    0,         0,          1,            -1 },
-	{ "Firefox",  NULL,        NULL,  1 << 1,    0,          0,            -1 },
-	{ NULL,       "rstudio",   NULL,  1 << 2,    0,          0,            -1 },
-	{ NULL,       ww,          NULL,  1 << 3,    0,          0,            -1 },
-	{ "Skype",    NULL,        NULL,  1 << 6,    1,          1,            -1 },
-	{ NULL,       NULL,        ssvnc, 1 << 7,    1,          1,            -1 },
-	{ NULL,       "ssvnc.tcl", NULL,  1 << 7,    1,          1,            -1 },
-	{ NULL,       "vncviewer", NULL,  1 << 7,    1,          1,            -1 },
-	{ "Spotify",  NULL,        NULL,  1 << 8,    0,          0,            -1 },
+	{ "Firefox",  NULL,        NULL,  0,         0,          0,            -1 },
+	{ NULL,       "rstudio",   NULL,  0,         0,          0,            -1 },
+	{ NULL,       ww,          NULL,  0,         0,          0,            -1 },
+	{ "Skype",    NULL,        NULL,  0,         1,          1,            -1 },
+	{ NULL,       NULL,        ssvnc, 0,         1,          1,            -1 },
+	{ NULL,       "ssvnc.tcl", NULL,  0,         1,          1,            -1 },
+	{ NULL,       "vncviewer", NULL,  0,         1,          1,            -1 },
+	{ "Spotify",  NULL,        NULL,  0,         0,          0,            -1 },
 	{ sp,         NULL,        NULL,  0,         1,          1,            -1 },
 	{ pv,         NULL,        NULL,  0,         1,          1,            -1 },
-	{ "Emacs",    NULL,        NULL,  0,         1,          1,            -1 },
+	{ "Emacs",    NULL,        NULL,  0,         0,          0,            -1 },
 };
 
 /* layout(s) */
@@ -95,7 +95,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL };
 static const char *termcmdtm[]   = { "/home/martin/bin/sttm", NULL };
 static const char *termcmd[]     = { "/home/martin/bin/st", NULL };
-static const char *emacscmd[]    = { "emacsclient", "-nc", NULL };
+static const char *emacscmd[]    = { "emacs", NULL };
 static const char *calccmd[]     = { "/home/martin/bin/calculator", NULL };
 static const char *npcmd[]       = { "/home/martin/bin/notepad", NULL };
 static const char *browsecmd[]   = { "firefox", NULL };
@@ -149,9 +149,6 @@ static Key keys[] = {
 	{ MODKEY,                    XK_period,   focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,          XK_comma,    tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,          XK_period,   tagmon,         {.i = +1 } },
-	TAGKEYS(                     XK_w,                        1) // firefox
-	TAGKEYS(                     XK_r,                        2) // rstudio
-	TAGKEYS(                     XK_a,                        8) // spotify
 	TAGKEYS(                     XK_1,                        0)
 	TAGKEYS(                     XK_2,                        1)
 	TAGKEYS(                     XK_3,                        2)
