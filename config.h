@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1 - txt", "2 - web", "3 - rst", "4", "5", "6", "7", "8", "9" };
 
 static const char fsl[]   = "FSL 6.0.1";
 static const char feat[]  = "FEAT - FMRI Expert Analysis Tool v6.00";
@@ -45,26 +45,26 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance     title  tags mask  iscentered  isfloat  monitor */
-	{ "Gimp",     NULL,        NULL,  0,         0,          1,            -1 },
-	{ NULL,       "afni",      NULL,  0,         0,          1,            -1 },
-	{ NULL,       "AFNI",      NULL,  0,         0,          1,            -1 },
-	{ NULL,       NULL,         fsl,  0,         1,          1,            -1 },
-	{ NULL,       NULL,        feat,  0,         1,          1,            -1 },
-	{ NULL,       "r_x11",     NULL,  0,         0,          1,            -1 },
-	{ NULL,       NULL,        "calc",0,         0,          1,            -1 },
-	{ NULL,       NULL,        np,    0,         0,          1,            -1 },
-	{ "Firefox",  NULL,        NULL,  0,         0,          0,            -1 },
-	{ NULL,       "rstudio",   NULL,  0,         0,          0,            -1 },
-	{ NULL,       ww,          NULL,  0,         0,          0,            -1 },
-	{ "Skype",    NULL,        NULL,  0,         1,          1,            -1 },
-	{ NULL,       NULL,        ssvnc, 0,         1,          1,            -1 },
-	{ NULL,       "ssvnc.tcl", NULL,  0,         1,          1,            -1 },
-	{ NULL,       "vncviewer", NULL,  0,         1,          1,            -1 },
-	{ "Spotify",  NULL,        NULL,  0,         0,          0,            -1 },
-	{ sp,         NULL,        NULL,  0,         1,          1,            -1 },
-	{ pv,         NULL,        NULL,  0,         1,          1,            -1 },
-	{ "Emacs",    NULL,        NULL,  0,         0,          0,            -1 },
+	/* class      instance     title   tags mask  iscentered  isfloat  monitor */
+	{ "Gimp",     NULL,        NULL,   0,         0,          1,            -1 },
+	{ NULL,       "afni",      NULL,   0,         0,          1,            -1 },
+	{ NULL,       "AFNI",      NULL,   0,         0,          1,            -1 },
+	{ NULL,       NULL,         fsl,   0,         1,          1,            -1 },
+	{ NULL,       NULL,        feat,   0,         1,          1,            -1 },
+	{ NULL,       "r_x11",     NULL,   0,         0,          1,            -1 },
+	{ NULL,       NULL,        "calc", 0,         0,          1,            -1 },
+	{ NULL,       NULL,        np,     0,         0,          1,            -1 },
+	{ "Firefox",  NULL,        NULL,   1 << 1,    0,          0,            -1 },
+	{ NULL,       "rstudio",   NULL,   1 << 2,    0,          0,            -1 },
+	{ NULL,       ww,          NULL,   0,         0,          0,            -1 },
+	{ "Skype",    NULL,        NULL,   0,         1,          1,            -1 },
+	{ NULL,       NULL,        ssvnc,  0,         1,          1,            -1 },
+	{ NULL,       "ssvnc.tcl", NULL,   0,         1,          1,            -1 },
+	{ NULL,       "vncviewer", NULL,   0,         1,          1,            -1 },
+	{ "Spotify",  NULL,        NULL,   1 << 8,    0,          0,            -1 },
+	{ sp,         NULL,        NULL,   0,         1,          1,            -1 },
+	{ pv,         NULL,        NULL,   0,         1,          1,            -1 },
+	{ "Emacs",    NULL,        NULL,   1 << 0,    0,          0,            -1 },
 };
 
 /* layout(s) */
