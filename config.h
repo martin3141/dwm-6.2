@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1 - txt", "2 - web", "3 - rst", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "e", "w", "r", "4", "5", "6", "7", "8", "m" };
 
 static const char fsl[]   = "FSL 6.0.1";
 static const char feat[]  = "FEAT - FMRI Expert Analysis Tool v6.00";
