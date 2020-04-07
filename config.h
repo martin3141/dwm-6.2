@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "e", "w", "r", "4", "5", "6", "7", "8", "m" };
+static const char *tags[] = { "1", "w", "r", "4", "5", "6", "7", "8", "m" };
 
 static const char fsl[]   = "FSL 6.0.1";
 static const char feat[]  = "FEAT - FMRI Expert Analysis Tool v6.00";
@@ -95,6 +95,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_blue, "-sf", col_gray4, NULL };
 static const char *termcmdtm[]   = { "/home/martin/bin/sttm", NULL };
 static const char *termcmd[]     = { "/home/martin/bin/st", NULL };
+static const char *vimcmd[]      = { "/home/martin/bin/st", "bash", "-i", "-c", "/usr/bin/vim", NULL };
 static const char *emacscmd[]    = { "emacs", NULL };
 static const char *calccmd[]     = { "/home/martin/bin/calculator", NULL };
 static const char *browsecmd[]   = { "firefox", NULL };
@@ -114,11 +115,11 @@ static Key keys[] = {
 	{ MODKEY,                    XK_p,        spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,          XK_Return,   spawn,          {.v = termcmd } },
 	{ MODKEY,                    XK_s,        spawn,          {.v = termcmd } },
+	{ MODKEY,                    XK_v,        spawn,          {.v = vimcmd } },
 	{ MODKEY,                    XK_e,        spawn,          {.v = emacscmd } },
 	{ MODKEY,                    XK_w,        spawn,          {.v = browsecmd } },
 	{ MODKEY,                    XK_a,        spawn,          {.v = spotifycmd } },
 	{ MODKEY,                    XK_r,        spawn,          {.v = rcmd } },
-	{ MODKEY,                    XK_c,        spawn,          {.v = calccmd } },
 	{ MODKEY,                    XK_n,        spawn,          {.v = nautcmd } },
 	{ 0,                         0x1008ff14,  spawn,          {.v = playcmd } },
 	{ 0,                         0x1008ff15,  spawn,          {.v = stopcmd } },
@@ -140,7 +141,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,          XK_k,        movestack,      {.i = -1 } },
 	{ MODKEY,                    XK_Return,   zoom,           {0} },
 	{ MODKEY,                    XK_Tab,      view,           {0} },
-	{ MODKEY|ShiftMask,          XK_q,        killclient,     {0} },
+	{ MODKEY|ShiftMask,          XK_c,        killclient,     {0} },
 	{ MODKEY,                    XK_t,        setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                    XK_f,        setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                    XK_m,        setlayout,      {.v = &layouts[1]} },
@@ -161,7 +162,7 @@ static Key keys[] = {
 	TAGKEYS(                     XK_7,                        6)
 	TAGKEYS(                     XK_8,                        7)
 	TAGKEYS(                     XK_9,                        8)
-	{ MODKEY|ShiftMask,          XK_e,        quit,           {0} },
+	{ MODKEY|ShiftMask,          XK_q,        quit,           {0} },
 };
 
 /* button definitions */
