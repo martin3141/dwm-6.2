@@ -96,7 +96,7 @@ static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufo
 static const char *termcmdtm[]   = { "/home/martin/bin/sttm", NULL };
 static const char *termcmd[]     = { "/home/martin/bin/st", NULL };
 static const char *vimcmd[]      = { "/home/martin/bin/st", "bash", "-i", "-c", "/usr/bin/vim", NULL };
-static const char *todocmd[]      = { "/home/martin/bin/st", "bash", "-i", "-c", "/usr/bin/vim /home/martin/Dropbox/notes/main/todo.md", NULL };
+static const char *todocmd[]     = { "/home/martin/bin/st", "bash", "-i", "-c", "/usr/bin/vim /home/martin/Dropbox/notes/main/todo.md", NULL };
 static const char *emacscmd[]    = { "emacs", NULL };
 static const char *calccmd[]     = { "/home/martin/bin/calculator", NULL };
 static const char *browsecmd[]   = { "firefox", NULL };
@@ -115,7 +115,7 @@ static Key keys[] = {
 	/* modifier                  key          function        argument */
 	{ MODKEY,                    XK_p,        spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,          XK_Return,   spawn,          {.v = termcmd } },
-	{ MODKEY,                    XK_s,        spawn,          {.v = termcmd } },
+    //{ MODKEY,                    XK_s,        spawn,          {.v = termcmd } },
 	{ MODKEY,                    XK_v,        spawn,          {.v = vimcmd } },
 	{ MODKEY,                    XK_t,        spawn,          {.v = todocmd } },
 	{ MODKEY,                    XK_e,        spawn,          {.v = emacscmd } },
