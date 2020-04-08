@@ -2,7 +2,7 @@ My modified version of DWM with the following changes:
 
 - Different keyboard shortcuts.
 - Different colours.
-- Applied autostart, pertag, systray, center, savefloats, fancybar, attachaside, noborder and movestack patches.
+- Applied autostart, pertag, systray, center, savefloats, fancybar, attachaside and movestack patches.
 
 dwm - dynamic window manager
 ============================
